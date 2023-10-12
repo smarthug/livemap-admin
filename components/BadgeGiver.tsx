@@ -74,7 +74,9 @@ export default function BadgaGiver() {
       .sendTransaction({
         from: address,
         to: ABI.ERC1155Token.address,
-        data: contract.methods.mint(TBAAddress, badgeType.current.value, []).encodeABI(),
+        data: contract.methods
+          .mint(TBAAddress, badgeType.current.value, [])
+          .encodeABI(),
         // gas: "1000000",
       })
       .then(function (receipt) {
@@ -92,10 +94,19 @@ export default function BadgaGiver() {
 
       <div>
         배지 번호
-        <input ref={badgeType} id="badgeType" type="number" defaultValue="3" min={1} max={5} />
+        <input
+          ref={badgeType}
+          id="badgeType"
+          type="number"
+          defaultValue="3"
+          min={1}
+          max={5}
+        />
       </div>
 
       <button onClick={giveBadge}>Give Badge</button>
+
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
     </div>
   );
 }

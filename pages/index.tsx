@@ -3,6 +3,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import BadgaGiver from '../components/BadgeGiver';
+import DaisyTest from '../components/DaisyTest';
 
 const Home: NextPage = () => {
   return (
@@ -55,7 +56,8 @@ const Home: NextPage = () => {
             </p>
           </a> */}
 
-          <BadgaGiver />
+          {/* <BadgaGiver /> */}
+          <DaisyTest />
         </div>
       </main>
 
